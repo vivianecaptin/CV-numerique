@@ -1,0 +1,125 @@
+/*  général 
+______________*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,400;1,500&family=Tourney:wght@100;300;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'Tourney', cursive;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: normal;
+}
+
+.bgGreen {
+    background-color: #3BB5A1;
+}
+.bgRed {
+    background-color: #FF4A35;
+}
+.bgLightGreen {
+    background-color: #A6CDCF;
+}
+.bgBlue {
+    background-color: #5E87BB;
+}
+
+.fBlue {
+    color: #5E87BB;
+}
+.fBlack {
+    color:#333333;
+}
+.fGrey {
+    color: #4A4A4A;
+}
+.fWhite {
+    color: #FFF5F5;
+}
+.fGreen {
+    color: #3BB5A1;
+}
+
+/* navbar
+__________ */
+header {
+    font-family: 'tourney';
+    position: sticky;
+    top: 0;
+}
+
+
+nav li:hover {
+    font-family: 'tourney black'
+}
+
+/* présentation
+________________ */
+
+h1 {
+    font-family: 'Tourney thin', cursive;
+    font-size: 6em;
+    color: #FFF5F5;
+}
+
+h1 span {
+    display: block;
+}
+
+h2 {
+    font-size: 3em;
+}
+.flexMe{
+    display: flex;
+    align-items: flex-end;
+}
+
+.lineGhost {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+
+
+.ghost {
+    animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+
+
+
+
+/* compétences
+_______________ */
+
+
+/* responsive */
+@media screen and (min-width: 769px) {
+    header {
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* présentation */
+    #me {
+        height: 90vh;
+    }
+    h1 span {
+        margin-top: -30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+        /* présentation */
+    h1 {
+        font-size:3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
