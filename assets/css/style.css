@@ -8,7 +8,7 @@ ______________*/
 }
 
 h2 {
-    font-family: 'Tourney', cursive;
+    font-family: 'Tourney';
 }
 
 body {
@@ -55,14 +55,15 @@ header {
 
 
 nav li:hover {
-    font-family: 'tourney black'
+    font-family: 'tourney black';
 }
 
 /* présentation
 ________________ */
 
 h1 {
-    font-family: 'Tourney thin';
+    font-family: 'Tourney';
+    font-weight: 100;
     font-size: 6em;
     color: #FFF5F5;
 }
