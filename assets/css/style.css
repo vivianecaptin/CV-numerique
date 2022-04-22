@@ -84,17 +84,34 @@ h2 {
     border-color: #FFF5F5;
 }
 
-
-.ghost {
-    animation: 3s ease-in 1s infinite reverse both running slidein;
+.ghost{
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-name: movingGhost;
 }
 
 
-
-
+@keyframes movingGhost {
+    from {
+        margin-left: 0%;
+    }
+    
+    to {
+        margin-left: calc(100% - 42px);
+    }
+}
 
 /* compétences
 _______________ */
+
+
+
+
+
 
 
 /* responsive */
@@ -111,6 +128,10 @@ _______________ */
     }
     h1 span {
         margin-top: -30px;
+    }
+
+    #skills {
+        height: 90vh;
     }
 }
 
