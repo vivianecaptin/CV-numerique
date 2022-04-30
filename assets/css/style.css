@@ -1,14 +1,29 @@
 /*  général 
 ______________*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,400;1,500&family=Tourney:wght@100;300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
     padding: 0;
 }
 
+h3 {
+    font-family: 'Press Start 2P';
+    font-size: 2em;
+}
+
 h2 {
-    font-family: 'Tourney';
+    font-family: 'tourney';
+    font-size: 3em;
+    padding-top: 11vh;
+    padding-bottom: 9vh ;
+}
+
+h4 {
+    font-family: 'tourney';
+    font-size: 2em;
+    font-weight: 600;
 }
 
 body {
@@ -53,9 +68,19 @@ header {
     top: 0;
 }
 
-
 nav li:hover {
-    font-family: 'tourney black';
+    font-family: 'tourney';
+    font-weight:900;
+}
+
+.ghostNav1{
+    width: 42px;
+    display: none;
+
+}
+
+.ghostNav2 {
+    width: 42px;
 }
 
 /* présentation
@@ -72,20 +97,22 @@ h1 span {
     display: block;
 }
 
-h2 {
-    font-size: 3em;
-}
 .flexMe{
     display: flex;
     align-items: flex-end;
 }
 
+/* petit fantome animation linaire */
+.blocGhost {
+    margin-top: 50px;
+}
 .lineGhost {
     border-bottom: 1px dashed;
     border-color: #FFF5F5;
 }
 
-.ghost{
+.imgGhostBlue{
+    width: 42px;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -98,6 +125,68 @@ h2 {
 
 @keyframes movingGhost {
     from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+/* compétences
+_______________ */
+
+
+.blockSkills {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+.bloc {
+    box-sizing: border-box;
+    border: 1px dashed;
+    border-color: #FFF5F5;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.blocCom {
+    margin: 25px 0 -25px 0;
+}
+
+.boldSkills {
+    font-weight: 600;
+    font-size: 1.3em;
+    padding-top: 10px;
+}
+
+.commSkills {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+/* fantome compétences */
+.blocGhostSkills {
+    margin-top: 50px;
+}
+.lineGhostSkills {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostSkills{
+    width: 42px;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-name: movingGhostSkills;
+}
+@keyframes movingGhostSkills {
+    from {
         margin-left: 0%;
     }
     
@@ -106,16 +195,193 @@ h2 {
     }
 }
 
-/* compétences
+/* expérience
 _______________ */
 
+.dateExp{
+    font-family: 'tourney';
+    font-weight: 100;
+    font-size: 2.4em;
+}
+.compagnyExp {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #3BB5A1;
+}
+.compagnyDescription {
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #3BB5A1;
+}
+.functionExp {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #5E87BB;
+}
+.missionsExp {
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #5E87BB;
+    font-style: italic;
+}
+
+/* fantome expérience */
+.blocGhostExp {
+    margin-top: 50px;
+}
+.lineGhostExp {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostExp {
+    width: 42px;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-name: movingGhostExp;
+}
+@keyframes movingGhostExp {
+    from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+/* formation
+________________ */
+.dateEduc{
+    font-family: 'tourney';
+    font-weight: 100;
+    font-size: 2.4em;
+}
+.degree {
+    font-weight: 300;
+    font-size: 1.5em;
+}
+.degreeTp {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+.licence {
+    padding-top: 25vh;
+}
+.bac {
+    padding-top: 18vh;
+}
+/* fantome formation */
+.blocGhostEduc {
+    margin-top: 50px;
+}
+.lineGhostEduc {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostEduc{
+    width: 42px;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-name: movingGhostEduc;
+}
+
+@keyframes movingGhostEduc {
+    from {
+        margin-left: 0%;
+    }
+    
+    to {
+        margin-left: calc(100% - 42px);
+    }
+}
+
+/* à propos
+____________ */
+h6 {
+    font-family: 'tourney';
+    font-weight: 300;
+    font-size: 2.4em;
+    color: #5E87BB;
+    padding-left: 30px;
+
+}
+
+#about .row .fWhite div {
+    font-weight: 300;
+    font-size: 1.5em;
+    padding-left: 30px;
+}
+
+/* fantome a propos */
+.blocGhostAbout {
+    margin-top: 50px;
+}
+.lineGhostAbout {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostAbout {
+    width: 42px;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-name: movingGhostAbout;
+}
+@keyframes movingGhostAbout {
+    from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+/* footer
+____________________ */
+.footerContact {
+    display: flex;
+}
+
+.viv {
+    font-family: 'tourney';
+    font-weight: 300;
+    font-size: 2em;
+    padding : 2vh 10px;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.icons {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icons i {
+    padding: 0 18px;
+}
 
 
 
-
-
-
-/* responsive */
+/* responsive 
+_____________________________________________________________*/
 @media screen and (min-width: 769px) {
     header {
         height: 10vh;
@@ -130,18 +396,122 @@ _______________ */
     h1 span {
         margin-top: -30px;
     }
-
+    /* compétences */
     #skills {
-        height: 90vh;
+        height: 100vh;
+    }
+    /* expérience */
+    #experience {
+        height: 100vh;
+    }
+    .actesPro {
+        padding: 80px 0 0 40px;
+    }
+    .pompidou {
+        padding-top: 30px;
+    }
+    /* formation */
+    #education {
+        height: 100vh;
+    }
+    /* à propos */
+    #about {
+        height: 92vh;
     }
 }
 
 @media screen and (max-width: 768px) {
-        /* présentation */
+    /* présentation */
     h1 {
         font-size:3em;
     }
     h2 {
         font-size: 2em;
+        padding-top: 8vh;
+        padding-bottom: 4vh;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+
+    /* compétences */
+    .blockSkills {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .bloc {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    .blocGhostSkills {
+        margin-top: 0;
+    }
+
+    /* expérience */
+    .dateExp{
+        font-size: 1.9em;
+    }
+    .compagnyExp {
+        font-size: 1.2em;
+    }
+    .compagnyDescription {
+        font-size: 1em;
+    }
+    .functionExp {
+        font-size: 1.2em;
+    }
+    .missionsExp {
+        font-size: 1em;
+    }
+    /* #experience .row {
+        text-align: center;
+    } */
+
+    .blocResp {
+        padding-top: 30px;
+    }
+    /* formation */
+    .dateEduc{
+        font-size: 1.9em;
+    }
+    .degreeTp {
+        font-size: 1.2em;
+    }
+    .degree {
+        font-size: 1.2em;
+    }
+    /* #education .row {
+        text-align: center;
+    } */
+
+    /* à propos */
+    h6 {
+        font-size: 1.9em;
+        text-align: center;
+        padding-left: 0;
+    }
+    #about .row .fWhite div {
+        font-size: 1.2em;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    /* footer */
+    .footerContact {
+        flex-direction: column;
+        justify-content:center;
+        padding: 1vh 10px;
+    }
+    .viv {
+        font-size: 1.4em;
+    }
+    .contact {
+        padding: 0 0 2vh 10px;
+    }
+    .icons {
+        font-size: 2em;
+        justify-content:space-around;
+        padding-right: 5px;
     }
 }
