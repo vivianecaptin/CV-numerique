@@ -113,11 +113,12 @@ h1 span {
 
 .imgGhostBlue{
     width: 42px;
+    cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0;
     animation-timing-function: linear;
     animation-name: movingGhost;
 }
@@ -135,7 +136,6 @@ h1 span {
 
 /* compétences
 _______________ */
-
 
 .blockSkills {
     display: flex;
@@ -177,11 +177,12 @@ _______________ */
 }
 .ghostSkills{
     width: 42px;
+    cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0;
     animation-timing-function: linear;
     animation-name: movingGhostSkills;
 }
@@ -235,11 +236,12 @@ _______________ */
 }
 .ghostExp {
     width: 42px;
+    cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0;
     animation-timing-function: linear;
     animation-name: movingGhostExp;
 }
@@ -284,11 +286,12 @@ ________________ */
 }
 .ghostEduc{
     width: 42px;
+    cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0;
     animation-timing-function: linear;
     animation-name: movingGhostEduc;
 }
@@ -330,11 +333,12 @@ h6 {
 }
 .ghostAbout {
     width: 42px;
+    cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-delay: 1s;
+    animation-delay: 0;
     animation-timing-function: linear;
     animation-name: movingGhostAbout;
 }

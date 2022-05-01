@@ -54,3 +54,108 @@ window.addEventListener('scroll', function() {
         imgGhostNav1.src = 'assets/img/ghost_green.png'
     }
 })
+
+// animation fantome présentation
+var meLineGhostAnimElement = document.querySelector ('#meLineGhostAnim');
+meLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+
+meLineGhostAnimElement.addEventListener('click', function() {
+    meLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+})
+
+meLineGhostAnimElement.addEventListener('mouseover', function() {
+    meLineGhostAnimElement.src = 'assets/img/ghost_blue2.png'
+    if (meLineGhostAnimElement.style.webkitAnimationPlayState = "running") {
+        meLineGhostAnimElement.style.webkitAnimationPlayState = "paused"
+    }
+})
+meLineGhostAnimElement.addEventListener('mouseout', function() {
+    meLineGhostAnimElement.src = 'assets/img/ghost_blue.png'
+    if (meLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
+        meLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
+
+// animation fantome compétences
+var skillsLineGhostAnimElement = document.querySelector ('#skillsLineGhostAnim');
+skillsLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+
+skillsLineGhostAnimElement.addEventListener('click', function() {
+    skillsLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+})
+
+skillsLineGhostAnimElement.addEventListener('mouseover', function() {
+    skillsLineGhostAnimElement.src = 'assets/img/ghost_pink.png'
+    if (skillsLineGhostAnimElement.style.webkitAnimationPlayState = "running") {
+        skillsLineGhostAnimElement.style.webkitAnimationPlayState = "paused"
+    }
+})
+skillsLineGhostAnimElement.addEventListener('mouseout', function() {
+    skillsLineGhostAnimElement.src = 'assets/img/ghost_pink2.png'
+    if (skillsLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
+        skillsLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
+
+// animation fantome experience
+var expLineGhostAnimElement = document.querySelector ('#expLineGhostAnim');
+expLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+
+expLineGhostAnimElement.addEventListener('click', function() {
+    expLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+})
+
+expLineGhostAnimElement.addEventListener('mouseover', function() {
+    expLineGhostAnimElement.src = 'assets/img/ghost_green2.png'
+    if (expLineGhostAnimElement.style.webkitAnimationPlayState = "running") {
+        expLineGhostAnimElement.style.webkitAnimationPlayState = "paused"
+    }
+})
+expLineGhostAnimElement.addEventListener('mouseout', function() {
+    expLineGhostAnimElement.src = 'assets/img/ghost_green.png'
+    if (expLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
+        expLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
+
+// animation fantome formation
+var educLineGhostAnimElement = document.querySelector ('#educLineGhostAnim');
+educLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+
+educLineGhostAnimElement.addEventListener('click', function() {
+    educLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+})
+
+educLineGhostAnimElement.addEventListener('mouseover', function() {
+    educLineGhostAnimElement.src = 'assets/img/ghost_light_green.png'
+    if (educLineGhostAnimElement.style.webkitAnimationPlayState = "running") {
+        educLineGhostAnimElement.style.webkitAnimationPlayState = "paused"
+    }
+})
+educLineGhostAnimElement.addEventListener('mouseout', function() {
+    educLineGhostAnimElement.src = 'assets/img/ghost_light_green2.png'
+    if (educLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
+        educLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
+
+// animation fantome à propos
+var aboutLineGhostAnimElement = document.querySelector ('#aboutLineGhostAnim');
+aboutLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+
+aboutLineGhostAnimElement.addEventListener('click', function() {
+    aboutLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+})
+
+aboutLineGhostAnimElement.addEventListener('mouseover', function() {
+    aboutLineGhostAnimElement.src = 'assets/img/ghost_blue2.png'
+    if (aboutLineGhostAnimElement.style.webkitAnimationPlayState = "running") {
+        aboutLineGhostAnimElement.style.webkitAnimationPlayState = "paused"
+    }
+})
+aboutLineGhostAnimElement.addEventListener('mouseout', function() {
+    aboutLineGhostAnimElement.src = 'assets/img/ghost_blue.png'
+    if (aboutLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
+        aboutLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
