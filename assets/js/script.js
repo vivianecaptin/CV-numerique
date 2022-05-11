@@ -44,50 +44,47 @@ calcSizeBlock();
 
 //selection de tout les nav-items
 var navItems = document.querySelectorAll ('.nav-link')
-//for of  BOUCLE les nav items
-for (navLink of navItems){
-    window.addEventListener('scroll', function() {
-        calcSizeBlock();
+//ecroute scroll for of  BOUCLE les nav items
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+    //me - bloc présentation // boucle sur les nav-link pour remouve la class active
+    if (window.scrollY < mePosition) {
+        for (navItem of navItems) {
+            navItem.classList.remove("active");
+        }
+    }
+    // boucle sur les nav-link pour remouve active ajout juste sur la bonne section
+    //skills
+    else if (window.scrollY > skillsPosition && window.scrollY < expPosition && !document.querySelector('.linkSkills').classList.contains("active")) {
+        for (navItem of navItems) {
+            navItem.classList.remove("active");
+        }
+        document.querySelector('.linkSkills').classList.add("active");
 
-        //me - bloc présentation // boucle sur les nav-link pour remouve la class active
-        if (window.scrollY < mePosition && window.scrollY > skillsPosition) {
-            for (navItem of navItems) {
-                navItem.classList.remove("active");
-            }
+    // experience - bloc expérience pro
+    }
+    else if (window.scrollY > expPosition && window.scrollY < educPosition && !document.querySelector('.linkExp').classList.contains("active")) {
+        for (navItem of navItems) {
+            navItem.classList.remove("active");
         }
-        // boucle sur les nav-link pour remouve active ajout juste sur la bonne section
-        //skills
-        else if (window.scrollY > skillsPosition && window.scrollY < expPosition && !document.querySelector('.linkSkills').classList.contains("active")) {
-            for (navItem of navItems) {
-                navItem.classList.remove("active");
-            }
-            document.querySelector('.linkSkills').classList.add("active");
-    
-        // experience - bloc expérience pro
-        }
-        else if (window.scrollY > expPosition && window.scrollY < educPosition && !document.querySelector('.linkExp').classList.contains("active")) {
-            for (navItem of navItems) {
-                navItem.classList.remove("active");
-            }
-            document.querySelector('.linkExp').classList.add("active");
-    
-        // eduction - bloc formation
-        }
-        else if (window.scrollY > educPosition && window.scrollY < aboutPosition && !document.querySelector('.linkEduc').classList.contains("active")) {
-            for (navItem of navItems) {
-                navItem.classList.remove("active");
-            }
-            document.querySelector('.linkEduc').classList.add("active");    
-        // about - bloc à propos
-        }
-        else if(window.scrollY > aboutPosition && !document.querySelector('.linkAbout').classList.contains("active")) {
-            for (navItem of navItems) {
-                navItem.classList.remove("active");
-            }
-            document.querySelector('.linkAbout').classList.add("active");        }
-    })
-}
+        document.querySelector('.linkExp').classList.add("active");
 
+    // eduction - bloc formation
+    }
+    else if (window.scrollY > educPosition && window.scrollY < aboutPosition && !document.querySelector('.linkEduc').classList.contains("active")) {
+        for (navItem of navItems) {
+            navItem.classList.remove("active");
+        }
+        document.querySelector('.linkEduc').classList.add("active");    
+    // about - bloc à propos
+    }
+    else if(window.scrollY > aboutPosition && !document.querySelector('.linkAbout').classList.contains("active")) {
+        for (navItem of navItems) {
+            navItem.classList.remove("active");
+        }
+        document.querySelector('.linkAbout').classList.add("active");
+    }
+})
 
 
 //ecoute scroll pour changements dans la navbar
