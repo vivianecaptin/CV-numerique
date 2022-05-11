@@ -13,6 +13,7 @@ imgGhostNav1.addEventListener('mouseout', function() {
 })
 
 //navbar color
+//declaration des id sections
 var meElement = document.querySelector('#me');
 var skillsElement = document.querySelector('#skills');
 var expElement = document.querySelector('#experience');
@@ -21,39 +22,113 @@ var aboutElement = document.querySelector('#about');
 
 var navbarElement = document.querySelector('#navbar');
 
-window.addEventListener('scroll', function() {
-    var mePosition = meElement.offsetTop + meElement.offsetHeight;
-    var skillsPosition = meElement.offsetTop + meElement.offsetHeight - navbarElement.offsetHeight;
-    var expPosition = skillsElement.offsetTop + skillsElement.offsetHeight - navbarElement.offsetHeight;
-    var educPosition = expElement.offsetTop + expElement.offsetHeight - navbarElement.offsetHeight;
-    var aboutPosition = educElement.offsetTop + educElement.offsetHeight - navbarElement.offsetHeight;;
+// déclaration des variable pour le calcul de la taille des blocs
+var mePosition ;
+var skillsPosition ;
+var expPosition ;
+var educPosition ;
+var aboutPosition ;
+
+// fonction calcul de la hauteur des blocs
+function calcSizeBlock(){
+    mePosition = meElement.offsetTop + meElement.offsetHeight - navbarElement.offsetHeight;
+    skillsPosition = meElement.offsetTop + meElement.offsetHeight - navbarElement.offsetHeight;
+    expPosition = skillsElement.offsetTop + skillsElement.offsetHeight - navbarElement.offsetHeight;
+    educPosition = expElement.offsetTop + expElement.offsetHeight - navbarElement.offsetHeight;
+    aboutPosition = educElement.offsetTop + educElement.offsetHeight - navbarElement.offsetHeight;
+}
+
+
+// apel de la fonction au chargement de la page
+calcSizeBlock();
+
+//selection de tout les nav-items
+var navItems = document.querySelectorAll ('.nav-link')
+//for of  BOUCLE les nav items
+for (navLink of navItems){
+    window.addEventListener('scroll', function() {
+        calcSizeBlock();
+
+        //me - bloc présentation // boucle sur les nav-link pour remouve la class active
+        if (window.scrollY < mePosition && window.scrollY > skillsPosition) {
+            for (navItem of navItems) {
+                navItem.classList.remove("active");
+            }
+        }
+        // boucle sur les nav-link pour remouve active ajout juste sur la bonne section
+        //skills
+        else if (window.scrollY > skillsPosition && window.scrollY < expPosition && !document.querySelector('.linkSkills').classList.contains("active")) {
+            for (navItem of navItems) {
+                navItem.classList.remove("active");
+            }
+            document.querySelector('.linkSkills').classList.add("active");
     
+        // experience - bloc expérience pro
+        }
+        else if (window.scrollY > expPosition && window.scrollY < educPosition && !document.querySelector('.linkExp').classList.contains("active")) {
+            for (navItem of navItems) {
+                navItem.classList.remove("active");
+            }
+            document.querySelector('.linkExp').classList.add("active");
+    
+        // eduction - bloc formation
+        }
+        else if (window.scrollY > educPosition && window.scrollY < aboutPosition && !document.querySelector('.linkEduc').classList.contains("active")) {
+            for (navItem of navItems) {
+                navItem.classList.remove("active");
+            }
+            document.querySelector('.linkEduc').classList.add("active");    
+        // about - bloc à propos
+        }
+        else if(window.scrollY > aboutPosition && !document.querySelector('.linkAbout').classList.contains("active")) {
+            for (navItem of navItems) {
+                navItem.classList.remove("active");
+            }
+            document.querySelector('.linkAbout').classList.add("active");        }
+    })
+}
+
+
+
+//ecoute scroll pour changements dans la navbar
+window.addEventListener('scroll', function() {
+    //appel de la fonction da la taille des sections en fonction du scroll sur l'écran utilisé
+    calcSizeBlock();
+
+    //me - bloc présentation
     if (window.scrollY < mePosition) {
         navbarElement.style.backgroundColor = '#A6CDCF';
-        imgGhostNav2.src = 'assets/img/ghost_green2.png'
-        imgGhostNav1.src = 'assets/img/ghost_green.png'
+        imgGhostNav2.src = 'assets/img/ghost_green2.png';
+        imgGhostNav1.src = 'assets/img/ghost_green.png';
     }
-    if (window.scrollY > skillsPosition) {
+    //skills - bloc compétences
+    else if (window.scrollY > skillsPosition && window.scrollY < expPosition) {
         navbarElement.style.backgroundColor = '#FFD4D0';
-        imgGhostNav2.src = 'assets/img/ghost_red2.png'
-        imgGhostNav1.src = 'assets/img/ghost_red.png'
+        imgGhostNav2.src = 'assets/img/ghost_red2.png';
+        imgGhostNav1.src = 'assets/img/ghost_red.png';
     }
-    if (window.scrollY > expPosition) {
+    // experience - bloc expérience pro
+    else if (window.scrollY > expPosition && window.scrollY < educPosition) {
         navbarElement.style.backgroundColor = '#E4F0F1';
-        imgGhostNav2.src = 'assets/img/ghost_blue2.png'
-        imgGhostNav1.src = 'assets/img/ghost_blue.png'
+        imgGhostNav2.src = 'assets/img/ghost_blue2.png';
+        imgGhostNav1.src = 'assets/img/ghost_blue.png';
     }
-    if (window.scrollY > educPosition) {
+    // eduction - bloc formation
+    else if (window.scrollY > educPosition && window.scrollY < aboutPosition) {
         navbarElement.style.backgroundColor = '#5E87BB';
-        imgGhostNav2.src = 'assets/img/ghost_light_green2.png'
-        imgGhostNav1.src = 'assets/img/ghost_light_green.png'
+        imgGhostNav2.src = 'assets/img/ghost_light_green2.png';
+        imgGhostNav1.src = 'assets/img/ghost_light_green.png';
     }
-    if (window.scrollY > aboutPosition) {
+    // about - bloc à propos
+    else if (window.scrollY > aboutPosition) {
         navbarElement.style.backgroundColor = '#E4F0F1';
-        imgGhostNav2.src = 'assets/img/ghost_green2.png'
-        imgGhostNav1.src = 'assets/img/ghost_green.png'
+        imgGhostNav2.src = 'assets/img/ghost_green2.png';
+        imgGhostNav1.src = 'assets/img/ghost_green.png';
     }
 })
+
+
+
 
 // animation fantome présentation
 var meLineGhostAnimElement = document.querySelector ('#meLineGhostAnim');
@@ -157,5 +232,32 @@ aboutLineGhostAnimElement.addEventListener('mouseout', function() {
     aboutLineGhostAnimElement.src = 'assets/img/ghost_blue.png'
     if (aboutLineGhostAnimElement.style.webkitAnimationPlayState = "paused") {
         aboutLineGhostAnimElement.style.webkitAnimationPlayState = "running"
+    }
+})
+
+// déclanchement animation blocs compétences
+var blocSkillsElmts = document.querySelectorAll('.bloc');
+
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+
+    if (window.scrollY > (skillsPosition/2)) {
+        for(bloc of blocSkillsElmts) {
+            bloc.style.opacity = 1;
+        }
+    }
+})
+
+// déclanchement animation blocs expérience
+var blocExpElmts = document.querySelectorAll('.blocExp');
+blocExpElmts.style.webkitAnimationPlayState = "paused";
+
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+
+    if (window.scrollY > (expPosition/2)) {
+        for(blocExp of blocExpElmts) {
+            blocExp.style.webkitAnimationPlayState = "running";
+        }
     }
 })

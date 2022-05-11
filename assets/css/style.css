@@ -97,10 +97,25 @@ h1 span {
     display: block;
 }
 
-.flexMe{
+.blocMe{
     display: flex;
     align-items: flex-end;
 }
+
+#me i {
+    font-size: 1.5em;
+}
+#me a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF5F5;
+}
+
+#me a:hover {
+    color: #5E87BB;
+    font-size: 1.55em;
+}
+
 
 /* petit fantome animation linaire */
 .blocGhost {
@@ -150,10 +165,18 @@ _______________ */
     padding: 20px;
     width: 30%;
     text-align: center;
+    opacity: 0;
 }
 
+.blocFront {
+    transition: opacity 2s linear 0.1s;
+}
 .blocCom {
     margin: 25px 0 -25px 0;
+    transition: opacity 2s linear 1.5s;
+}
+.blocAdmin {
+    transition: opacity 2s linear 2.5s;
 }
 
 .boldSkills {
@@ -253,6 +276,41 @@ _______________ */
     to {
         margin-left: 0%;
     }
+}
+
+/* animation des bloc expérience */
+.alphaPic {
+    animation: shakeAlpha 1s;
+}
+@keyframes shakeAlpha {
+    0% { transform: translate(0, 0) ; }
+    25% { transform: translate(5px, 5px) ; }
+    50% { transform: translate(0, 0) ; }
+    75% { transform: translate(-5px, 5px) ; }
+    100% { transform: translate(0, 0) ; }
+}
+
+.actesPro {
+    animation: shakeActes 1s;
+    animation-delay: 1.5s;
+}
+@keyframes shakeActes {
+    0% { transform: translate(0, 0) ; }
+    25% { transform: translate(5px, 5px) ; }
+    50% { transform: translate(0, 0) ; }
+    75% { transform: translate(-5px, 5px) ; }
+    100% { transform: translate(0, 0) ; }
+}
+.pompidou {
+    animation: shakeCgp 1s;
+    animation-delay: 3s;
+}
+@keyframes shakeCgp {
+    0% { transform: translate(0, 0) ; }
+    25% { transform: translate(5px, 5px) ; }
+    50% { transform: translate(0, 0) ; }
+    75% { transform: translate(-5px, 5px) ; }
+    100% { transform: translate(0, 0) ; }
 }
 
 /* formation
@@ -364,15 +422,9 @@ ____________________ */
     font-size: 2em;
     padding : 2vh 10px;
 }
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-}
 
 .icons {
-    font-size: 1.5em;
+    font-size: 1.7em;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -382,7 +434,14 @@ ____________________ */
     padding: 0 18px;
 }
 
-
+footer a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF5F5;
+}
+footer a:hover {
+    color: #A6CDCF;
+}
 
 /* responsive 
 _____________________________________________________________*/
