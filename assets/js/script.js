@@ -246,15 +246,20 @@ window.addEventListener('scroll', function() {
 })
 
 // déclanchement animation blocs expérience
-var blocExpElmts = document.querySelectorAll('.blocExp');
-blocExpElmts.style.webkitAnimationPlayState = "paused";
+var blocExpAlphaP = document.querySelector('.alphaPic');
+var blocExpActesPro = document.querySelector('.actesPro');
+var blocExpCgp = document.querySelector('.pompidou');
+
+blocExpAlphaP.style.webkitAnimationPlayState = "paused";
+blocExpActesPro.style.webkitAnimationPlayState = "paused";
+blocExpCgp.style.webkitAnimationPlayState = "paused";
 
 window.addEventListener('scroll', function() {
     calcSizeBlock();
 
-    if (window.scrollY > (expPosition/2)) {
-        for(blocExp of blocExpElmts) {
-            blocExp.style.webkitAnimationPlayState = "running";
-        }
+    if (window.scrollY > (expPosition - (expPosition/4))) {
+        blocExpAlphaP.style.webkitAnimationPlayState = "running";
+        blocExpActesPro.style.webkitAnimationPlayState = "running";
+        blocExpCgp.style.webkitAnimationPlayState = "running";
     }
 })
