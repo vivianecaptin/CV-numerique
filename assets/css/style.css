@@ -104,6 +104,7 @@ h1 span {
 
 #me i {
     font-size: 1.5em;
+    transition: font-size 150ms ease-in-out 0s;
 }
 #me a {
     cursor: pointer;
@@ -111,43 +112,25 @@ h1 span {
     color: #FFF5F5;
 }
 
+.blocIconsMe {
+    display: flex;
+}
+
+.iconMe {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
 #me a:hover {
     color: #5E87BB;
-    font-size: 1.55em;
+    font-size: 1.7em;
 }
 
 
-/* petit fantome animation linaire */
-.blocGhost {
-    margin-top: 50px;
-}
-.lineGhost {
-    border-bottom: 1px dashed;
-    border-color: #FFF5F5;
-}
 
-.imgGhostBlue{
-    width: 42px;
-    cursor: pointer;
-    animation-direction: alternate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-name: movingGhost;
-}
-
-
-@keyframes movingGhost {
-    from {
-        margin-left: calc(100% - 42px);
-    }
-    
-    to {
-        margin-left: 0%;
-    }
-}
 
 /* compétences
 _______________ */
@@ -168,6 +151,7 @@ _______________ */
     opacity: 0;
 }
 
+/* transition skill  */
 .blocFront {
     transition: opacity 2s linear 0.1s;
 }
@@ -190,34 +174,6 @@ _______________ */
     font-size: 1.3em;
 }
 
-/* fantome compétences */
-.blocGhostSkills {
-    margin-top: 50px;
-}
-.lineGhostSkills {
-    border-bottom: 1px dashed;
-    border-color: #FFF5F5;
-}
-.ghostSkills{
-    width: 42px;
-    cursor: pointer;
-    animation-direction: alternate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-name: movingGhostSkills;
-}
-@keyframes movingGhostSkills {
-    from {
-        margin-left: 0%;
-    }
-    
-    to {
-        margin-left: calc(100% - 42px);
-    }
-}
 
 /* expérience
 _______________ */
@@ -249,38 +205,13 @@ _______________ */
     font-style: italic;
 }
 
-/* fantome expérience */
-.blocGhostExp {
-    margin-top: 50px;
-}
-.lineGhostExp {
-    border-bottom: 1px dashed;
-    border-color: #FFF5F5;
-}
-.ghostExp {
-    width: 42px;
-    cursor: pointer;
-    animation-direction: alternate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-name: movingGhostExp;
-}
-@keyframes movingGhostExp {
-    from {
-        margin-left: calc(100% - 42px);
-    }
-    
-    to {
-        margin-left: 0%;
-    }
-}
+
 
 /* animation des bloc expérience */
 .alphaPic {
     animation: shakeAlpha 1s;
+    animation-delay: 0.5s;
+
 }
 @keyframes shakeAlpha {
     0% { transform: translate(0, 0) ; }
@@ -330,39 +261,26 @@ ________________ */
 }
 .licence {
     padding-top: 25vh;
+    transition: opacity 1.5s linear 1s;
 }
 .bac {
     padding-top: 18vh;
-}
-/* fantome formation */
-.blocGhostEduc {
-    margin-top: 50px;
-}
-.lineGhostEduc {
-    border-bottom: 1px dashed;
-    border-color: #FFF5F5;
-}
-.ghostEduc{
-    width: 42px;
-    cursor: pointer;
-    animation-direction: alternate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-name: movingGhostEduc;
+    transition: opacity 1.5s linear 1.5s;
 }
 
-@keyframes movingGhostEduc {
-    from {
-        margin-left: 0%;
-    }
-    
-    to {
-        margin-left: calc(100% - 42px);
-    }
+/* animation blocs */
+.blocEduc {
+    opacity: 0
 }
+
+.tP {
+    transition: opacity 1.5s linear 0s;
+}
+.masterPro {
+    transition: opacity 1.5s linear 0.5s;
+}
+
+
 
 /* à propos
 ____________ */
@@ -381,34 +299,31 @@ h6 {
     padding-left: 30px;
 }
 
-/* fantome a propos */
-.blocGhostAbout {
-    margin-top: 50px;
+/* animation des bloc à propos */
+.personality {
+    animation: shakePersonality 1s;
+    animation-delay: 0.5s;
 }
-.lineGhostAbout {
-    border-bottom: 1px dashed;
-    border-color: #FFF5F5;
+@keyframes shakePersonality {
+    0% { transform: translate(0, 0) ; }
+    25% { transform: translate(5px, 5px) ; }
+    50% { transform: translate(0, 0) ; }
+    75% { transform: translate(-5px, 5px) ; }
+    100% { transform: translate(0, 0) ; }
 }
-.ghostAbout {
-    width: 42px;
-    cursor: pointer;
-    animation-direction: alternate;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-name: movingGhostAbout;
+.interests {
+    animation: shakeInterests 1s;
+    animation-delay: 1.5s;
 }
-@keyframes movingGhostAbout {
-    from {
-        margin-left: calc(100% - 42px);
-    }
-    
-    to {
-        margin-left: 0%;
-    }
+@keyframes shakeInterests {
+    0% { transform: translate(0, 0) ; }
+    25% { transform: translate(5px, 5px) ; }
+    50% { transform: translate(0, 0) ; }
+    75% { transform: translate(-5px, 5px) ; }
+    100% { transform: translate(0, 0) ; }
 }
+
+
 
 /* footer
 ____________________ */
@@ -441,6 +356,159 @@ footer a {
 }
 footer a:hover {
     color: #A6CDCF;
+}
+
+
+/* ANIMATIONS fantomes
+_____________________________________________________________ */
+/* ME petit fantome animation linaire */
+.blocGhost {
+    margin-top: 50px;
+}
+.lineGhost {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+
+.imgGhostBlue{
+    width: 42px;
+    cursor: pointer;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-name: movingGhost;
+}
+
+
+@keyframes movingGhost {
+    from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+/* fantome compétences */
+.blocGhostSkills {
+    margin-top: 50px;
+}
+.lineGhostSkills {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostSkills{
+    width: 42px;
+    cursor: pointer;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-name: movingGhostSkills;
+}
+@keyframes movingGhostSkills {
+    from {
+        margin-left: 0%;
+    }
+    
+    to {
+        margin-left: calc(100% - 42px);
+    }
+}
+
+/* fantome expérience */
+.blocGhostExp {
+    margin-top: 50px;
+}
+.lineGhostExp {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostExp {
+    width: 42px;
+    cursor: pointer;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-name: movingGhostExp;
+}
+@keyframes movingGhostExp {
+    from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+
+
+/* fantome formation */
+.blocGhostEduc {
+    margin-top: 50px;
+}
+.lineGhostEduc {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostEduc{
+    width: 42px;
+    cursor: pointer;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-name: movingGhostEduc;
+}
+
+@keyframes movingGhostEduc {
+    from {
+        margin-left: 0%;
+    }
+    
+    to {
+        margin-left: calc(100% - 42px);
+    }
+}
+
+/* fantome a propos */
+.blocGhostAbout {
+    margin-top: 50px;
+}
+.lineGhostAbout {
+    border-bottom: 1px dashed;
+    border-color: #FFF5F5;
+}
+.ghostAbout {
+    width: 42px;
+    cursor: pointer;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-name: movingGhostAbout;
+}
+@keyframes movingGhostAbout {
+    from {
+        margin-left: calc(100% - 42px);
+    }
+    
+    to {
+        margin-left: 0%;
+    }
 }
 
 /* responsive 

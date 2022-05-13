@@ -263,3 +263,34 @@ window.addEventListener('scroll', function() {
         blocExpCgp.style.webkitAnimationPlayState = "running";
     }
 })
+
+// déclanchement animation blocs diplomes
+var blocEducElmts = document.querySelectorAll('.blocEduc');
+
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+
+    if (window.scrollY > (educPosition - (educPosition/4))) {
+        for(blocEduc of blocEducElmts) {
+            blocEduc.style.opacity = 1;
+        }
+    }
+})
+
+// déclanchement animation blocs à propos
+var blocPersonality = document.querySelector('.personality');
+var blocInterests = document.querySelector('.interests');
+
+blocPersonality.style.webkitAnimationPlayState = "paused";
+blocInterests.style.webkitAnimationPlayState = "paused";
+
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+    if (window.scrollY > aboutPosition) {
+        console.log(aboutPosition);
+        console.log(aboutPosition - (aboutPosition/3));
+
+        blocPersonality.style.webkitAnimationPlayState = "running";
+        blocInterests.style.webkitAnimationPlayState = "running";
+    }
+})
