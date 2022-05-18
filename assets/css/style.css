@@ -342,11 +342,12 @@ ____________________ */
     font-size: 1.7em;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center;    
+
 }
 
-.icons i {
-    padding: 0 18px;
+.icons>a {
+    padding:0 20px;
 }
 
 footer a {
@@ -644,5 +645,9 @@ _____________________________________________________________*/
         font-size: 2em;
         justify-content:space-around;
         padding-right: 5px;
+    }
+
+    .icons>a {
+        padding: 0;
     }
 }
