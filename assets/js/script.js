@@ -129,10 +129,14 @@ window.addEventListener('scroll', function() {
 
 // animation fantome présentation
 var meLineGhostAnimElement = document.querySelector ('#meLineGhostAnim');
-meLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
+var imgGhostBlueAnim = document.querySelector ('.imgGhostBlue');
+// meLineGhostAnimElement.style.webkitAnimationPlayState = "paused";
 
-meLineGhostAnimElement.addEventListener('click', function() {
-    meLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+imgGhostBlueAnim.addEventListener('click', function() {
+    // meLineGhostAnimElement.style.webkitAnimationPlayState = "running";
+    imgGhostBlueAnim.classList.remove("imgGhostBlue");
+    imgGhostBlueAnim.classList.add("imgGhostBlue")
+
 })
 
 meLineGhostAnimElement.addEventListener('mouseover', function() {
@@ -147,6 +151,11 @@ meLineGhostAnimElement.addEventListener('mouseout', function() {
         meLineGhostAnimElement.style.webkitAnimationPlayState = "running"
     }
 })
+
+
+
+
+
 
 // animation fantome compétences
 var skillsLineGhostAnimElement = document.querySelector ('#skillsLineGhostAnim');
@@ -246,23 +255,23 @@ window.addEventListener('scroll', function() {
 })
 
 // déclanchement animation blocs expérience
-var blocExpAlphaP = document.querySelector('.alphaPic');
-var blocExpActesPro = document.querySelector('.actesPro');
-var blocExpCgp = document.querySelector('.pompidou');
+// var blocExpAlphaP = document.querySelector('.alphaPic');
+// var blocExpActesPro = document.querySelector('.actesPro');
+// var blocExpCgp = document.querySelector('.pompidou');
 
-blocExpAlphaP.style.webkitAnimationPlayState = "paused";
-blocExpActesPro.style.webkitAnimationPlayState = "paused";
-blocExpCgp.style.webkitAnimationPlayState = "paused";
+// blocExpAlphaP.style.webkitAnimationPlayState = "paused";
+// blocExpActesPro.style.webkitAnimationPlayState = "paused";
+// blocExpCgp.style.webkitAnimationPlayState = "paused";
 
-window.addEventListener('scroll', function() {
-    calcSizeBlock();
+// window.addEventListener('scroll', function() {
+//     calcSizeBlock();
 
-    if (window.scrollY > (expPosition - (expPosition/4))) {
-        blocExpAlphaP.style.webkitAnimationPlayState = "running";
-        blocExpActesPro.style.webkitAnimationPlayState = "running";
-        blocExpCgp.style.webkitAnimationPlayState = "running";
-    }
-})
+//     if (window.scrollY > (expPosition - (expPosition/4))) {
+//         blocExpAlphaP.style.webkitAnimationPlayState = "running";
+//         blocExpActesPro.style.webkitAnimationPlayState = "running";
+//         blocExpCgp.style.webkitAnimationPlayState = "running";
+//     }
+// })
 
 // déclanchement animation blocs diplomes
 var blocEducElmts = document.querySelectorAll('.blocEduc');
@@ -278,19 +287,19 @@ window.addEventListener('scroll', function() {
 })
 
 // déclanchement animation blocs à propos
-var blocPersonality = document.querySelector('.personality');
-var blocInterests = document.querySelector('.interests');
+// var blocPersonality = document.querySelector('.personality');
+// var blocInterests = document.querySelector('.interests');
 
-blocPersonality.style.webkitAnimationPlayState = "paused";
-blocInterests.style.webkitAnimationPlayState = "paused";
+// blocPersonality.style.webkitAnimationPlayState = "paused";
+// blocInterests.style.webkitAnimationPlayState = "paused";
 
-window.addEventListener('scroll', function() {
-    calcSizeBlock();
-    if (window.scrollY > aboutPosition) {
-        console.log(aboutPosition);
-        console.log(aboutPosition - (aboutPosition/3));
+// window.addEventListener('scroll', function() {
+//     calcSizeBlock();
+//     if (window.scrollY > aboutPosition) {
+//         console.log(aboutPosition);
+//         console.log(aboutPosition - (aboutPosition/3));
 
-        blocPersonality.style.webkitAnimationPlayState = "running";
-        blocInterests.style.webkitAnimationPlayState = "running";
-    }
-})
+//         blocPersonality.style.webkitAnimationPlayState = "running";
+//         blocInterests.style.webkitAnimationPlayState = "running";
+//     }
+// })

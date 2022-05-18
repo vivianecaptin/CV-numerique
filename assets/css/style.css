@@ -208,7 +208,7 @@ _______________ */
 
 
 /* animation des bloc expérience */
-.alphaPic {
+/* .alphaPic {
     animation: shakeAlpha 1s;
     animation-delay: 0.5s;
 
@@ -242,7 +242,7 @@ _______________ */
     50% { transform: translate(0, 0) ; }
     75% { transform: translate(-5px, 5px) ; }
     100% { transform: translate(0, 0) ; }
-}
+} */
 
 /* formation
 ________________ */
@@ -268,7 +268,7 @@ ________________ */
     transition: opacity 1.5s linear 1.5s;
 }
 
-/* animation blocs */
+/* transitions blocs formation*/
 .blocEduc {
     opacity: 0
 }
@@ -300,7 +300,7 @@ h6 {
 }
 
 /* animation des bloc à propos */
-.personality {
+/* .personality {
     animation: shakePersonality 1s;
     animation-delay: 0.5s;
 }
@@ -321,7 +321,7 @@ h6 {
     50% { transform: translate(0, 0) ; }
     75% { transform: translate(-5px, 5px) ; }
     100% { transform: translate(0, 0) ; }
-}
+} */
 
 
 
@@ -375,7 +375,7 @@ _____________________________________________________________ */
     cursor: pointer;
     animation-direction: alternate;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 3;
     animation-fill-mode: both;
     animation-delay: 0;
     animation-timing-function: linear;
