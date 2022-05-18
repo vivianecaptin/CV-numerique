@@ -64,7 +64,10 @@ body {
 __________ */
 header {
     font-family: 'tourney';
+    font-size: 1.4em;
+    font-weight: 300;
     position: sticky;
+    color: #333333;
     top: 0;
 }
 
@@ -76,11 +79,16 @@ nav li:hover {
 .ghostNav1{
     width: 42px;
     display: none;
-
 }
 
 .ghostNav2 {
     width: 42px;
+}
+
+.activeLink {
+    font-family: 'tourney';
+    font-weight: 900;
+    color: #FFF5F5;
 }
 
 /* présentation
@@ -564,6 +572,9 @@ _____________________________________________________________*/
     }
     h3 {
         font-size: 1.5em;
+    }
+    .blocMe {
+        margin-top: 30px;
     }
 
     /* compétences */

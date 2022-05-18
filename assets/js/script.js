@@ -42,6 +42,7 @@ function calcSizeBlock(){
 // apel de la fonction au chargement de la page
 calcSizeBlock();
 
+// ajout class pour changement couleur du lien actif de la navbar
 //selection de tout les nav-items
 var navItems = document.querySelectorAll ('.nav-link')
 //ecroute scroll for of  BOUCLE les nav items
@@ -50,39 +51,39 @@ window.addEventListener('scroll', function() {
     //me - bloc présentation // boucle sur les nav-link pour remouve la class active
     if (window.scrollY < mePosition) {
         for (navItem of navItems) {
-            navItem.classList.remove("active");
+            navItem.classList.remove("activeLink");
         }
     }
     // boucle sur les nav-link pour remouve active ajout juste sur la bonne section
     //skills
-    else if (window.scrollY > skillsPosition && window.scrollY < expPosition && !document.querySelector('.linkSkills').classList.contains("active")) {
+    else if (window.scrollY > skillsPosition && window.scrollY < expPosition && !document.querySelector('.linkSkills').classList.contains("activeLink")) {
         for (navItem of navItems) {
-            navItem.classList.remove("active");
+            navItem.classList.remove("activeLink");
         }
-        document.querySelector('.linkSkills').classList.add("active");
+        document.querySelector('.linkSkills').classList.add("activeLink");
 
     // experience - bloc expérience pro
     }
-    else if (window.scrollY > expPosition && window.scrollY < educPosition && !document.querySelector('.linkExp').classList.contains("active")) {
+    else if (window.scrollY > expPosition && window.scrollY < educPosition && !document.querySelector('.linkExp').classList.contains("activeLink")) {
         for (navItem of navItems) {
-            navItem.classList.remove("active");
+            navItem.classList.remove("activeLink");
         }
-        document.querySelector('.linkExp').classList.add("active");
+        document.querySelector('.linkExp').classList.add("activeLink");
 
     // eduction - bloc formation
     }
-    else if (window.scrollY > educPosition && window.scrollY < aboutPosition && !document.querySelector('.linkEduc').classList.contains("active")) {
+    else if (window.scrollY > educPosition && window.scrollY < aboutPosition && !document.querySelector('.linkEduc').classList.contains("activeLink")) {
         for (navItem of navItems) {
-            navItem.classList.remove("active");
+            navItem.classList.remove("activeLink");
         }
-        document.querySelector('.linkEduc').classList.add("active");    
+        document.querySelector('.linkEduc').classList.add("activeLink");    
     // about - bloc à propos
     }
-    else if(window.scrollY > aboutPosition && !document.querySelector('.linkAbout').classList.contains("active")) {
+    else if(window.scrollY > aboutPosition && !document.querySelector('.linkAbout').classList.contains("activeLink")) {
         for (navItem of navItems) {
-            navItem.classList.remove("active");
+            navItem.classList.remove("activeLink");
         }
-        document.querySelector('.linkAbout').classList.add("active");
+        document.querySelector('.linkAbout').classList.add("activeLink");
     }
 })
 
