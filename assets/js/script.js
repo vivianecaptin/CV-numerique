@@ -288,19 +288,19 @@ window.addEventListener('scroll', function() {
 })
 
 // déclanchement animation blocs à propos
-// var blocPersonality = document.querySelector('.personality');
-// var blocInterests = document.querySelector('.interests');
+var blocPersonality = document.querySelector('.personality');
+var blocInterests = document.querySelector('.interests');
 
-// blocPersonality.style.webkitAnimationPlayState = "paused";
-// blocInterests.style.webkitAnimationPlayState = "paused";
+blocPersonality.style.animationPlayState = "paused";
+blocInterests.style.animationPlayState = "paused";
 
-// window.addEventListener('scroll', function() {
-//     calcSizeBlock();
-//     if (window.scrollY > aboutPosition) {
-//         console.log(aboutPosition);
-//         console.log(aboutPosition - (aboutPosition/3));
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
+    if (window.scrollY > aboutPosition) {
+        console.log(aboutPosition);
+        console.log(aboutPosition - (aboutPosition/3));
 
-//         blocPersonality.style.webkitAnimationPlayState = "running";
-//         blocInterests.style.webkitAnimationPlayState = "running";
-//     }
-// })
+        blocPersonality.style.animationPlayState = "running";
+        blocInterests.style.animationPlayState = "running";
+    }
+})

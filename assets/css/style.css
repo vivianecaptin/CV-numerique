@@ -302,35 +302,54 @@ h6 {
 }
 
 #about .row .fWhite div {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5em;
     padding-left: 30px;
 }
 
 /* animation des bloc à propos */
-/* .personality {
-    animation: shakePersonality 1s;
-    animation-delay: 0.5s;
+.personality {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
-@keyframes shakePersonality {
-    0% { transform: translate(0, 0) ; }
-    25% { transform: translate(5px, 5px) ; }
-    50% { transform: translate(0, 0) ; }
-    75% { transform: translate(-5px, 5px) ; }
-    100% { transform: translate(0, 0) ; }
-}
-.interests {
-    animation: shakeInterests 1s;
-    animation-delay: 1.5s;
-}
-@keyframes shakeInterests {
-    0% { transform: translate(0, 0) ; }
-    25% { transform: translate(5px, 5px) ; }
-    50% { transform: translate(0, 0) ; }
-    75% { transform: translate(-5px, 5px) ; }
-    100% { transform: translate(0, 0) ; }
-} */
 
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-1500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.interests {
+    animation-name: fadeInRight;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(1500px);
+    }
+
+    30% {
+        opacity: 0;
+        transform: translateX(1500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+
+}
 
 
 /* footer
