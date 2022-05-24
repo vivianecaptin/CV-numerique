@@ -256,23 +256,23 @@ window.addEventListener('scroll', function() {
 })
 
 // déclanchement animation blocs expérience
-// var blocExpAlphaP = document.querySelector('.alphaPic');
-// var blocExpActesPro = document.querySelector('.actesPro');
-// var blocExpCgp = document.querySelector('.pompidou');
+var blocExpAlphaP = document.querySelector('.alphaPic');
+var blocExpActesPro = document.querySelector('.actesPro');
+var blocExpCgp = document.querySelector('.pompidou');
 
-// blocExpAlphaP.style.webkitAnimationPlayState = "paused";
-// blocExpActesPro.style.webkitAnimationPlayState = "paused";
-// blocExpCgp.style.webkitAnimationPlayState = "paused";
+blocExpAlphaP.style.animationPlayState = "paused";
+blocExpActesPro.style.animationPlayState = "paused";
+blocExpCgp.style.animationPlayState = "paused";
 
-// window.addEventListener('scroll', function() {
-//     calcSizeBlock();
+window.addEventListener('scroll', function() {
+    calcSizeBlock();
 
-//     if (window.scrollY > (expPosition - (expPosition/4))) {
-//         blocExpAlphaP.style.webkitAnimationPlayState = "running";
-//         blocExpActesPro.style.webkitAnimationPlayState = "running";
-//         blocExpCgp.style.webkitAnimationPlayState = "running";
-//     }
-// })
+    if (window.scrollY > (expPosition - (expPosition/4))) {
+        blocExpAlphaP.style.animationPlayState = "running";
+        blocExpActesPro.style.animationPlayState = "running";
+        blocExpCgp.style.animationPlayState = "running";
+    }
+})
 
 // déclanchement animation blocs diplomes
 var blocEducElmts = document.querySelectorAll('.blocEduc');
@@ -296,10 +296,7 @@ blocInterests.style.animationPlayState = "paused";
 
 window.addEventListener('scroll', function() {
     calcSizeBlock();
-    if (window.scrollY > aboutPosition) {
-        console.log(aboutPosition);
-        console.log(aboutPosition - (aboutPosition/3));
-
+    if (window.scrollY > (aboutPosition - (aboutPosition/4))) {
         blocPersonality.style.animationPlayState = "running";
         blocInterests.style.animationPlayState = "running";
     }

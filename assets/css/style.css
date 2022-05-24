@@ -161,14 +161,14 @@ _______________ */
 
 /* transition skill  */
 .blocFront {
-    transition: opacity 2s linear 0.1s;
+    transition: opacity 500ms linear 100ms;
 }
 .blocCom {
     margin: 25px 0 -25px 0;
-    transition: opacity 2s linear 1.5s;
+    transition: opacity 500ms linear 1s;
 }
 .blocAdmin {
-    transition: opacity 2s linear 2.5s;
+    transition: opacity 1s linear 1500ms;
 }
 
 .boldSkills {
@@ -216,41 +216,69 @@ _______________ */
 
 
 /* animation des bloc expérience */
-/* .alphaPic {
-    animation: shakeAlpha 1s;
-    animation-delay: 0.5s;
-
+.alphaPic {
+    animation-name: fadeInL;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
-@keyframes shakeAlpha {
-    0% { transform: translate(0, 0) ; }
-    25% { transform: translate(5px, 5px) ; }
-    50% { transform: translate(0, 0) ; }
-    75% { transform: translate(-5px, 5px) ; }
-    100% { transform: translate(0, 0) ; }
+
+@keyframes fadeInL {
+    0% {
+        display: none;
+        transform: translateX(-1500px);
+    }
+    100% {
+        display: block;
+        transform: translateX(0);
+    }
 }
 
 .actesPro {
-    animation: shakeActes 1s;
-    animation-delay: 1.5s;
+    animation-name: fadeInUp;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-out;
 }
-@keyframes shakeActes {
-    0% { transform: translate(0, 0) ; }
-    25% { transform: translate(5px, 5px) ; }
-    50% { transform: translate(0, 0) ; }
-    75% { transform: translate(-5px, 5px) ; }
-    100% { transform: translate(0, 0) ; }
+
+@keyframes fadeInUp {
+    0% {
+        display: none;
+        transform: translateY(1500px);
+    }
+    30% {
+        display: none;
+        transform: translateY(1500px);
+    }
+    100% {
+        display: block;
+        transform: translateY(0);
+    }
 }
+
 .pompidou {
-    animation: shakeCgp 1s;
-    animation-delay: 3s;
+    animation-name: fadeInR;
+    animation-duration: 1500ms;
+    animation-timing-function: ease-out;
 }
-@keyframes shakeCgp {
-    0% { transform: translate(0, 0) ; }
-    25% { transform: translate(5px, 5px) ; }
-    50% { transform: translate(0, 0) ; }
-    75% { transform: translate(-5px, 5px) ; }
-    100% { transform: translate(0, 0) ; }
-} */
+
+@keyframes fadeInR {
+    0% {
+        display: none;
+        transform: translateX(1600px);
+    }
+    30% {
+        display: none;
+        transform: translateX(1600px);
+    }
+    50% {
+        display: none;
+        transform: translateX(1600px);
+    }
+    100% {
+        display: block;
+        transform: translateX(0);
+    }
+}
+
 
 /* formation
 ________________ */
@@ -269,11 +297,11 @@ ________________ */
 }
 .licence {
     padding-top: 25vh;
-    transition: opacity 1.5s linear 1s;
+    transition: opacity 1s linear 1s;
 }
 .bac {
     padding-top: 18vh;
-    transition: opacity 1.5s linear 1.5s;
+    transition: opacity 1s linear 1.5s;
 }
 
 /* transitions blocs formation*/
@@ -282,10 +310,10 @@ ________________ */
 }
 
 .tP {
-    transition: opacity 1.5s linear 0s;
+    transition: opacity 1s linear 0s;
 }
 .masterPro {
-    transition: opacity 1.5s linear 0.5s;
+    transition: opacity 1s linear 0.5s;
 }
 
 
@@ -316,12 +344,12 @@ h6 {
 
 @keyframes fadeInLeft {
     0% {
-        opacity: 0;
+        display: none;
         transform: translateX(-1500px);
     }
 
     100% {
-        opacity: 1;
+        display: block;
         transform: translateX(0);
     }
 }
@@ -330,25 +358,22 @@ h6 {
     animation-name: fadeInRight;
     animation-duration: 1500ms;
     animation-timing-function: ease-out;
+
 }
 
 @keyframes fadeInRight {
     0% {
-        opacity: 0;
+        display: none;
         transform: translateX(1500px);
     }
-
     30% {
-        opacity: 0;
+        display: none;
         transform: translateX(1500px);
     }
-
     100% {
-        opacity: 1;
+        display: block;
         transform: translateX(0);
     }
-
-
 }
 
 
