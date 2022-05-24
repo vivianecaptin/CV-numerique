@@ -29,6 +29,7 @@ h4 {
 body {
     font-family: 'Raleway', sans-serif;
     line-height: normal;
+
 }
 
 .bgGreen {
@@ -216,6 +217,10 @@ _______________ */
 
 
 /* animation des bloc expérience */
+#experience {
+    overflow: hidden;
+}
+
 .alphaPic {
     animation-name: fadeInL;
     animation-duration: 1s;
@@ -224,11 +229,11 @@ _______________ */
 
 @keyframes fadeInL {
     0% {
-        display: none;
+        opacity: 0;
         transform: translateX(-1500px);
     }
     100% {
-        display: block;
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -241,15 +246,15 @@ _______________ */
 
 @keyframes fadeInUp {
     0% {
-        display: none;
+        opacity: 0;
         transform: translateY(1500px);
     }
     30% {
-        display: none;
+        opacity: 0;
         transform: translateY(1500px);
     }
     100% {
-        display: block;
+        opacity: 1;
         transform: translateY(0);
     }
 }
@@ -262,19 +267,19 @@ _______________ */
 
 @keyframes fadeInR {
     0% {
-        display: none;
+        opacity: 0;
         transform: translateX(1600px);
     }
     30% {
-        display: none;
+        opacity: 0;
         transform: translateX(1600px);
     }
     50% {
-        display: none;
+        opacity: 0;
         transform: translateX(1600px);
     }
     100% {
-        display: block;
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -320,6 +325,10 @@ ________________ */
 
 /* à propos
 ____________ */
+#about {
+    overflow: hidden;
+}
+
 h6 {
     font-family: 'tourney';
     font-weight: 300;
@@ -344,12 +353,12 @@ h6 {
 
 @keyframes fadeInLeft {
     0% {
-        display: none;
+        opacity: 0;
         transform: translateX(-1500px);
     }
 
     100% {
-        display: block;
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -358,21 +367,26 @@ h6 {
     animation-name: fadeInRight;
     animation-duration: 1500ms;
     animation-timing-function: ease-out;
+    overflow: hidden;
 
 }
 
 @keyframes fadeInRight {
     0% {
-        display: none;
+        opacity: 0;
         transform: translateX(1500px);
+        overflow: hidden;
+
     }
     30% {
-        display: none;
+        opacity: 0;
         transform: translateX(1500px);
+        overflow: hidden;
     }
     100% {
-        display: block;
+        opacity: 1;
         transform: translateX(0);
+        overflow: hidden;
     }
 }
 
