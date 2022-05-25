@@ -296,7 +296,7 @@ blocInterests.style.animationPlayState = "paused";
 
 window.addEventListener('scroll', function() {
     calcSizeBlock();
-    if (window.scrollY > (aboutPosition - (aboutPosition/4))) {
+    if (window.scrollY > (aboutPosition - 100)) {
         blocPersonality.style.animationPlayState = "running";
         blocInterests.style.animationPlayState = "running";
     }

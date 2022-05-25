@@ -367,26 +367,20 @@ h6 {
     animation-name: fadeInRight;
     animation-duration: 1500ms;
     animation-timing-function: ease-out;
-    overflow: hidden;
-
 }
 
 @keyframes fadeInRight {
     0% {
         opacity: 0;
         transform: translateX(1500px);
-        overflow: hidden;
-
     }
     30% {
         opacity: 0;
         transform: translateX(1500px);
-        overflow: hidden;
     }
     100% {
         opacity: 1;
         transform: translateX(0);
-        overflow: hidden;
     }
 }
 
@@ -468,6 +462,26 @@ _____________________________________________________________ */
     border-bottom: 1px dashed;
     border-color: #FFF5F5;
 }
+
+/* .animGhost {
+    animation-name: shake;
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: 5;
+}
+@keyframes shake {
+    0% {
+        transform: translateX(10s0px);
+    }
+    
+    100% {
+        transform: translateX(0px);
+    }
+} */
+
 .ghostSkills{
     width: 42px;
     cursor: pointer;
