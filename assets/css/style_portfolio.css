@@ -1,0 +1,31 @@
+.buttonPortfolio {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    background-color: #5E87BB;
+    border-style: none;
+    font-weight: 700;
+    color: #FFF5F5;
+}
+
+.btn:hover {
+    background-color: #FFF5F5;
+    color: #333333;
+}
+
+.card {
+    background-color: #E4F0F1;
+    color: #333333;
+    font-weight: 500;
+    border-style: none;
+}
+
+h5 {
+    font-weight: 600;
+}
+
+header {
+    z-index: 1;
+}

@@ -44,6 +44,9 @@ body {
 .bgBlue {
     background-color: #5E87BB;
 }
+.bgLightBlue {
+    background-color: #E4F0F1;
+}
 
 .fBlue {
     color: #5E87BB;
@@ -463,24 +466,6 @@ _____________________________________________________________ */
     border-color: #FFF5F5;
 }
 
-/* .animGhost {
-    animation-name: shake;
-    animation-direction: alternate;
-    animation-duration: 3s;
-    animation-delay: 0;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-    animation-iteration-count: 5;
-}
-@keyframes shake {
-    0% {
-        transform: translateX(10s0px);
-    }
-    
-    100% {
-        transform: translateX(0px);
-    }
-} */
 
 .ghostSkills{
     width: 42px;
