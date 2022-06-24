@@ -1,0 +1,16 @@
+h1 {
+    color: #FFF5F5;
+    padding: 0 0 15px 0;
+    font-size: 2em;
+    font-weight: 900;
+
+}
+
+header {
+    z-index: 1;
+}
+
+.bgBlack {
+    background-color: #070707;
+}
+
