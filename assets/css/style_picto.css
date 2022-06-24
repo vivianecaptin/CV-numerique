@@ -14,3 +14,8 @@ header {
     background-color: #070707;
 }
 
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1,2em;
+    }
+}
